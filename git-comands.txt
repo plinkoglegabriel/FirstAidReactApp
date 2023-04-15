@@ -2,3 +2,4 @@ git push origin main
 git pull origin main
 git status
 git add file
+git branch
