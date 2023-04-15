@@ -3,4 +3,6 @@ git pull origin main
 git status
 git add file
 git branch
-Create a new local repository: git init
+Create a new local repository: git init 
+Check out a repository: git clone /path/to/repository
+or remote: git clone username@host:/path/to/repository
