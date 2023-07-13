@@ -11,10 +11,10 @@ function Home() {
   return (
     <div className="Home">
         <h1>Ready to Rescue: A First Aid Guide</h1>
-        <h2>Click on a body part!</h2>
+        <h2>Click on a Body Part!</h2>
         < MappedBodyImage />
-        <div className="List-of-injuries"> 
         <h2>Common First Aid Injuries</h2>
+        <div className="List-of-injuries"> 
           <div className="Injury">
             <p>Wounds & Bleeding</p>
             <img src={woundsAndBleeding} className="Injury-icon" alt="Cuts and Scrapes" />

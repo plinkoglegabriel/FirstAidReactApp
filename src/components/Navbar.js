@@ -19,6 +19,12 @@ const Navbar = () => {
       <li>
         <Link to="/contact" className="navbar-link">Conditions</Link>
       </li>
+      <li>
+          <div className="search-container">
+            <input type="text" placeholder="Search" className="search-input" />
+            <button type="submit" className="search-button">Search</button>
+          </div>
+        </li>
     </ul>
 </nav>
   );
