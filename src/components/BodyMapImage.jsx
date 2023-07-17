@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import ImageMapper from 'react-img-mapper';
 import bodyImage from '../assets/body.png';
+import { useNavigate } from 'react-router-dom';
 
 const Mapper = (props) => {
+  const navigate = useNavigate();
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleChestClick = () => {
+    navigate('/chestconditions'); // Redirect to the chestconditions page
+  };
+
+  const handleChestMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleChestMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+
   const MAP = {
   name: 'bodymap',
     areas: [
@@ -509,17 +526,53 @@ const Mapper = (props) => {
       ]
     };
 
-
-    return <ImageMapper src={bodyImage} map={MAP} 
-    
+    return (
+     <div style={{ position: 'relative' }}>
+      {isHovered && (
+        <div
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            color: 'white',
+            padding: '0.5rem',
+            borderRadius: '4px'
+          }}
+        >
+          Chest Conditions
+        </div>
+      )}
+      <ImageMapper
+        src={bodyImage}
+        map={MAP}
+        onClick={(area) => {
+          if (area.name === '12') {
+            handleChestClick();
+          }
+        }}
+        onMouseEnter={(area) => {
+          if (area.name === '12') {
+            handleChestMouseEnter();
+          }
+        }}
+        onMouseLeave={(area) => {
+          if (area.name === '12') {
+            handleChestMouseLeave();
+          }
+        }}
         style={{
-        width: '5%',
-        height: '5%',
-        // Add more styles as needed
-      }}/>
-  }
+          width: '5%',
+          height: '5%',
+          // Add more styles as needed
+        }}
+      />
+    </div>
+  );
+};
 
-  export default Mapper;
+export default Mapper;
 
 
 // {/* <map name="bodymap">

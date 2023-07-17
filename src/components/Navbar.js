@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import '../assets/App.css';
 import Logo from './Logo';
 
 const Navbar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDropdownOpen(false);
+
+  };
   return (
     <nav>
       <div className="logo-container">
@@ -14,10 +24,18 @@ const Navbar = () => {
         <Link to="/" className="navbar-link">Home</Link>
       </li>
       <li>
-        <Link to="/about" className="navbar-link">About Me</Link>
+        <Link to="/About" className="navbar-link">About Me</Link>
       </li>
-      <li>
-        <Link to="/contact" className="navbar-link">Conditions</Link>
+      <li
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <Link to="/Conditions" className="navbar-link">Conditions</Link>
+        {isDropdownOpen && (
+          <div className="dropdown-content">
+            <Link to="/Asthma" className="navbar-link">Asthma</Link>
+          </div>
+        )}
       </li>
       <li>
           <div className="search-container">
