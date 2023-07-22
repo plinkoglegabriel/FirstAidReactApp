@@ -4,6 +4,9 @@ import ChestConditions from './pages/ChestConditions';
 import Asthma from './pages/Asthma';
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import HeartAttack from "./pages/HeartAttack";
+import AboutMe from './pages/AboutMe';
+import Conditions from "./pages/Conditions"
 
 function App() {
   return (
@@ -12,9 +15,11 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/AboutMe" element={<Asthma />} />
+          <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="/conditions" element={<Conditions />} />
           <Route path="/chestconditions" element={<ChestConditions />} />
-          <Route path="/Asthma" element={<Asthma />} />
+          <Route path="/asthma" element={<Asthma />} />
+          <Route path="/heartattack" element={<HeartAttack />} />
         </Routes>
       </header>
     </div>

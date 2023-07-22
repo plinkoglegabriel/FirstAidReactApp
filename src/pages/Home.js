@@ -9,7 +9,7 @@ import Footer from '../components/Footer.jsx';
 
 function Home() {
   return (
-    <div className="Home">
+    <div className="Page">
         <h1>Ready to Rescue: A First Aid Guide</h1>
         <h2>Click on a Body Part!</h2>
         < MappedBodyImage />
@@ -27,9 +27,6 @@ function Home() {
             <p>Insects Bites/Stings</p>
             <img src={bitesAndStings} className="Injury-icon" alt="Bites And Stings" />
           </div>
-          {/* <div className="Injury">
-           <p>Splinters</p>
-          </div> */}
           <div className="Injury">
             <p>Nosebleed</p>
             <img src={nosebleed} className="Injury-icon" alt="Nosebleed" />

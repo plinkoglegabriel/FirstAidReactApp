@@ -1,20 +1,20 @@
 import '../assets/App.css';
 import ClickableImage from '../components/ClickableImage'; 
 import Footer from '../components/Footer.jsx';
-import AsthmaImage from '../assets/asthma.png';
+import ChestConditions from '../assets/chestconditions.png';
 import HeartAttackImage from '../assets/heartattack.png';
 
-function ChestConditions() {
+function Conditions() {
   return (
     <div className="Page">
       <h1>Common Chest Conditions/Disorders</h1>
       <div className="conditions-list">
         <div className="condition">
-            <h3>Asthma</h3>
+            <h3>Chest Conditions</h3>
             <ClickableImage
-            targetPage="/asthma"
-            imageSource={AsthmaImage}
-            altText="Asthma Page"
+            targetPage="/chestconditions"
+            imageSource={ChestConditions}
+            altText="Chest Conditions Page"
             />
         </div>
         <div className="condition">
@@ -32,4 +32,4 @@ function ChestConditions() {
   );
 }
 
-export default ChestConditions;
+export default Conditions;

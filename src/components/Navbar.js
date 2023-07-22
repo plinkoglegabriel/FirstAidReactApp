@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import '../assets/App.css';
 import Logo from './Logo';
 
+
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -12,8 +13,8 @@ const Navbar = () => {
 
   const handleMouseLeave = () => {
     setIsDropdownOpen(false);
-
   };
+
   return (
     <nav>
       <div className="logo-container">
@@ -24,19 +25,22 @@ const Navbar = () => {
         <Link to="/" className="navbar-link">Home</Link>
       </li>
       <li>
-        <Link to="/About" className="navbar-link">About Me</Link>
+        <Link to="/aboutme" className="navbar-link">About Me</Link>
       </li>
-      <li
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <Link to="/Conditions" className="navbar-link">Conditions</Link>
-        {isDropdownOpen && (
-          <div className="dropdown-content">
-            <Link to="/Asthma" className="navbar-link">Asthma</Link>
+      <li>
+          <div
+            className="dropdown-wrapper"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <Link to="/conditions" className="navbar-link">Conditions</Link>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <Link to="/Asthma" className="navbar-link">Asthma</Link>
+              </div>
+            )}
           </div>
-        )}
-      </li>
+        </li>
       <li>
           <div className="search-container">
             <input type="text" placeholder="Search" className="search-input" />

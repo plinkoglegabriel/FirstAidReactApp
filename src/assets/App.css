@@ -15,19 +15,22 @@ h2, h3, p {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 10.5em;
   font-family: 'Barrio';
-  margin-top: 1rem;
+  margin-top: 0;
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 h2 {
   font-size: 2rem;
-  margin-top: 1rem;
   color: black;
 }
 
+p {
+  font-size: 1rem;
+  padding: 1rem 10rem 1rem 10rem;
+}
 
 .condition {
   background-color: rgb(255, 255, 255);
@@ -37,7 +40,7 @@ h2 {
   margin: 0.5rem;
 }
 
-.List-of-chest-conditions {
+.conditions-list {
   display: flex;
 }
 
@@ -113,6 +116,7 @@ a.navbar-link:hover {
 
 .Human-body {
   height: 100vh;
+  position: relative;
 }
 
 .List-of-injuries {
@@ -135,34 +139,43 @@ a.navbar-link:hover {
   border: 0.15rem solid #000;
 }
 
-.Home,
-.Asthma {
+.Page {
   background-color: #a0f5a9;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.patient {
-  width: 5rem;
-  height: 10rem;
-  border-radius: 70%;
+.person {
+  width: 19.5rem;
+  height: 27rem;
 }
 
 .qualification {
   padding-bottom: 20vh;
 }
 
+.dropdown-wrapper {
+  position: relative; /* Required for positioning the dropdown content */
+  display: inline-block; /* To make it cover only the necessary width */
+}
+
 .dropdown-content {
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 5rem;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  top: 100%; /* Position the dropdown below the parent element */
-  margin-top: 1rem; /* Add a small margin to separate the dropdown from the parent element */
+  top: 100%;
+  margin-top: 0.2rem;
+  display: none;
+  left: 0; /* Make sure the dropdown content is positioned correctly */
+}
+
+/* Show the dropdown content when the .show class is present on the parent (dropdown-wrapper) */
+.dropdown-wrapper:hover .dropdown-content {
+  display: block;
 }
 
 @keyframes App-logo-spin {
@@ -172,6 +185,20 @@ a.navbar-link:hover {
   to {
     transform: rotate(360deg);
   }
+}
+h1 {
+  font-size: 3rem;
+  margin-top: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 768px) {
