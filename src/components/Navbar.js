@@ -33,10 +33,10 @@ const Navbar = () => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Link to="/conditions" className="navbar-link">Conditions</Link>
+            <Link to="/firstaidproblems" className="navbar-link">First Aid Problems</Link>
             {isDropdownOpen && (
               <div className="dropdown-content">
-                <Link to="/Asthma" className="navbar-link">Asthma</Link>
+                <Link to="/conditions" className="navbar-link">Conditions</Link>
               </div>
             )}
           </div>

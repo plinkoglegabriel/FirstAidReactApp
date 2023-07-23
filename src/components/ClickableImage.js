@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ClickableImage = ({ targetPage, imageSource, altText }) => {
+const ClickableImage = ({ className, targetPage, imageSource, altText }) => {
   return (
     <a href={targetPage}>
-      <img src={imageSource} alt={altText} />
+      <img src={imageSource} alt={altText} className={className}/>
     </a>
   );
 }

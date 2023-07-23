@@ -1,12 +1,13 @@
 import './assets/App.css';
 import Home from './pages/Home';
-import ChestConditions from './pages/ChestConditions';
+import Conditions from './pages/Conditions';
 import Asthma from './pages/Asthma';
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeartAttack from "./pages/HeartAttack";
 import AboutMe from './pages/AboutMe';
-import Conditions from "./pages/Conditions"
+import FirstAidProblems from './pages/FirstAidProblems';
+import Angina from './pages/Angina';
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="/firstaidproblems" element={<FirstAidProblems />} />
           <Route path="/conditions" element={<Conditions />} />
-          <Route path="/chestconditions" element={<ChestConditions />} />
           <Route path="/asthma" element={<Asthma />} />
           <Route path="/heartattack" element={<HeartAttack />} />
+          <Route path="/angina" element={<Angina />} />
         </Routes>
       </header>
     </div>

@@ -29,19 +29,17 @@ h2 {
 
 p {
   font-size: 1rem;
-  padding: 1rem 10rem 1rem 10rem;
+  padding: 1rem 3rem 1rem 3rem;
 }
 
 .condition {
   background-color: rgb(255, 255, 255);
   padding: 0.5rem;
-  flex: 1;
   border: 3px solid black;
   margin: 0.5rem;
-}
-
-.conditions-list {
-  display: flex;
+  display: inline-block;
+  height: 20rem;
+  width: 20rem;
 }
 
 nav {
@@ -148,8 +146,8 @@ a.navbar-link:hover {
 }
 
 .person {
-  width: 19.5rem;
-  height: 27rem;
+  width: 25rem;
+  height: 25rem;
 }
 
 .qualification {
@@ -171,6 +169,16 @@ a.navbar-link:hover {
   margin-top: 0.2rem;
   display: none;
   left: 0; /* Make sure the dropdown content is positioned correctly */
+}
+
+.clickable-image {
+  height: 15rem;
+  width: 15rem;
+}
+
+.step {
+  height: 10rem;
+  width: 15rem;
 }
 
 /* Show the dropdown content when the .show class is present on the parent (dropdown-wrapper) */
@@ -216,5 +224,10 @@ h3 {
   .List-of-injuries {
     padding-left: 5%; /* Adjust the left padding for smaller screens */
     padding-right: 5%; /* Adjust the right padding for smaller screens */
+  }
+
+  .clickable-image img {
+    width: 80px; /* Adjust the width for smaller screens */
+    height: 80px; /* Adjust the height for smaller screens */
   }
 }
