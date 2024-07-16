@@ -18,16 +18,16 @@ const Navbar = () => {
   return (
     <nav>
       <div className="logo-container">
-       <Logo />
-     </div>
-    <ul>
-      <li>
-        <Link to="/" className="navbar-link">Home</Link>
-      </li>
-      <li>
-        <Link to="/aboutme" className="navbar-link">About Me</Link>
-      </li>
-      <li>
+        <Logo />
+      </div>
+      <ul className="nav">
+        <li>
+          <Link to="/" className="navbar-link">Home</Link>
+        </li>
+        <li>
+          <Link to="/aboutme" className="navbar-link">About Me</Link>
+        </li>
+        <li>
           <div
             className="dropdown-wrapper"
             onMouseEnter={handleMouseEnter}
@@ -41,14 +41,14 @@ const Navbar = () => {
             )}
           </div>
         </li>
-      <li>
+        <li>
           <div className="search-container">
             <input type="text" placeholder="Search" className="search-input" />
             <button type="submit" className="search-button">Search</button>
           </div>
         </li>
-    </ul>
-</nav>
+      </ul>
+    </nav>
   );
 };
 

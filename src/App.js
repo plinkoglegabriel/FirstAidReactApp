@@ -8,12 +8,14 @@ import HeartAttack from "./pages/HeartAttack";
 import AboutMe from './pages/AboutMe';
 import FirstAidProblems from './pages/FirstAidProblems';
 import Angina from './pages/Angina';
+import ChestConditions from './pages/ChestConditions';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutme" element={<AboutMe />} />
@@ -22,6 +24,7 @@ function App() {
           <Route path="/asthma" element={<Asthma />} />
           <Route path="/heartattack" element={<HeartAttack />} />
           <Route path="/angina" element={<Angina />} />
+          <Route path="/chestconditions" element={<ChestConditions />} />
         </Routes>
       </header>
     </div>
