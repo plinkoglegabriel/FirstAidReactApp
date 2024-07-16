@@ -9,7 +9,7 @@ import AboutMe from './pages/AboutMe';
 import FirstAidProblems from './pages/FirstAidProblems';
 import Angina from './pages/Angina';
 import ChestConditions from './pages/ChestConditions';
-
+import Wounds from './pages/WoundsAndBleeding';
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
           <Route path="/heartattack" element={<HeartAttack />} />
           <Route path="/angina" element={<Angina />} />
           <Route path="/chestconditions" element={<ChestConditions />} />
+          <Route path="/wounds&bleeding" element={<Wounds />} />
         </Routes>
       </header>
     </div>
